@@ -1,0 +1,7 @@
+/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/deps/futures_io-acfb2c4bf64f8d06.d: /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/futures-io-0.3.32/src/lib.rs
+
+/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/deps/libfutures_io-acfb2c4bf64f8d06.rlib: /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/futures-io-0.3.32/src/lib.rs
+
+/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/deps/libfutures_io-acfb2c4bf64f8d06.rmeta: /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/futures-io-0.3.32/src/lib.rs
+
+/Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/futures-io-0.3.32/src/lib.rs:

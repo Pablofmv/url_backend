@@ -1,0 +1,9 @@
+/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/deps/crossbeam_queue-58f056ff7b1b9643.d: /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/lib.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/array_queue.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/seg_queue.rs
+
+/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/deps/libcrossbeam_queue-58f056ff7b1b9643.rlib: /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/lib.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/array_queue.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/seg_queue.rs
+
+/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/deps/libcrossbeam_queue-58f056ff7b1b9643.rmeta: /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/lib.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/array_queue.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/seg_queue.rs
+
+/Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/lib.rs:
+/Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/array_queue.rs:
+/Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-queue-0.3.12/src/seg_queue.rs:

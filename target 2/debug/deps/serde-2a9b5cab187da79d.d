@@ -1,0 +1,12 @@
+/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/deps/serde-2a9b5cab187da79d.d: /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/build/serde-fb38a5cad694673a/out/private.rs
+
+/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/deps/libserde-2a9b5cab187da79d.rmeta: /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/build/serde-fb38a5cad694673a/out/private.rs
+
+/Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/Users/pablofranciscomendozavargas/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/build/serde-fb38a5cad694673a/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/pablofranciscomendozavargas/Desktop/url_backend/target/debug/build/serde-fb38a5cad694673a/out
