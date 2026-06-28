@@ -79,4 +79,8 @@ Automatic SQLx migrations
 TLS-enabled PostgreSQL connections
 __
 
+Architecture
+
+User Browser -> HTTPS -> Hostinger DNS -> (Northflank, Docker Container) -> Rust Axum Backend -> (Read Host Header, Store Analytics, Redirect User) -> PostgreSQL
+
 
