@@ -8,7 +8,7 @@ COPY migrations ./migrations
 
 RUN cargo build --release
 
-RUN cargo install sqlx-cli --version 0.8.6 --no-default-features --features postgres
+RUN cargo install sqlx-cli --version 0.8.6 --no-default-features --features postgres,rustls
 
 FROM debian:bookworm-slim
 
