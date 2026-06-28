@@ -1,0 +1,37 @@
+name: Rust CI
+
+on:
+push:
+branches:
+- master
+- main
+
+pull_request:
+branches:
+- master
+- main
+
+jobs:
+check:
+runs-on: ubuntu-latest
+
+```
+steps:
+  - name: Checkout Repository
+    uses: actions/checkout@v4
+
+  - name: Install Rust
+    uses: dtolnay/rust-toolchain@stable
+
+  - name: Cache Cargo
+    uses: Swatinem/rust-cache@v2
+
+  - name: Cargo Format
+    run: cargo fmt --all -- --check
+
+  - name: Cargo Check
+    run: cargo check
+
+  - name: Cargo Test
+    run: cargo test
+```

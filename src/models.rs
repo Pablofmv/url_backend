@@ -1,12 +1,8 @@
-
 use serde::Serialize;
 
 use uuid::Uuid;
 
-use chrono::{
-    DateTime,
-    Utc,
-};
+use chrono::{DateTime, Utc};
 
 #[derive(Debug, Serialize)]
 pub struct ClickCountResponse {
@@ -24,7 +20,6 @@ pub struct AnalyticsCountResponse {
     pub count: i64,
 }
 
-
 #[derive(Debug, Clone, Serialize)]
 pub struct ClickEvent {
     pub subdomain: String,
@@ -34,8 +29,7 @@ pub struct ClickEvent {
     pub device_type: Option<String>,
 }
 
-
-#[derive(Debug, Clone, Serialize,sqlx::FromRow)]
+#[derive(Debug, Clone, Serialize, sqlx::FromRow)]
 pub struct ClickEventRecord {
     pub id: Uuid,
     pub subdomain: String,
@@ -45,13 +39,11 @@ pub struct ClickEventRecord {
     pub device_type: Option<String>,
 }
 
-
 #[derive(Debug, Clone, Serialize)]
 pub struct Link {
     pub subdomain: String,
     pub destination_url: String,
 }
-
 
 #[derive(Debug, Clone, sqlx::FromRow)]
 pub struct LinkRecord {
@@ -59,16 +51,11 @@ pub struct LinkRecord {
     pub subdomain: String,
     pub destination_url: String,
     pub created_at: DateTime<Utc>,
-
 }
 
-
-
-
-pub fn find_link<'a>(links: &'a [Link], subdomain: &str,) -> Option<&'a Link> {
+pub fn find_link<'a>(links: &'a [Link], subdomain: &str) -> Option<&'a Link> {
     links.iter().find(|link| link.subdomain == subdomain)
 }
-
 
 #[cfg(test)]
 
@@ -77,8 +64,7 @@ mod tests {
 
     #[test]
 
-    fn find_existing_link(){
-
+    fn find_existing_link() {
         let links = vec![
             Link {
                 subdomain: "me".to_string(),
@@ -87,7 +73,7 @@ mod tests {
             Link {
                 subdomain: "info".to_string(),
                 destination_url: "www.pablomendoza.site".to_string(),
-            }
+            },
         ];
 
         let result = find_link(&links, "me");
@@ -97,6 +83,5 @@ mod tests {
         let link = result.unwrap();
 
         assert_eq!(link.subdomain, "me");
-
     }
 }
