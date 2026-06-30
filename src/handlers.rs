@@ -153,11 +153,11 @@ pub async fn redirect_by_host(
         return Err(StatusCode::BAD_REQUEST);
     };
 
-    let Some(link) = state.find_link(subdomain) else {
+    let Some(link_record) = state.find_link_by_subdomain_db(subdomain).await.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)? else {
         return Err(StatusCode::NOT_FOUND);
     };
 
-    let destination_url = link.destination_url.clone();
+    let destination_url = link_record.destination_url.clone();
 
     let click_event = build_click_event(subdomain, &headers);
 
