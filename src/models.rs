@@ -50,7 +50,6 @@ pub struct LinkRecord {
     pub id: Uuid,
     pub subdomain: String,
     pub destination_url: String,
-    pub created_at: DateTime<Utc>,
 }
 
 pub fn find_link<'a>(links: &'a [Link], subdomain: &str) -> Option<&'a Link> {
