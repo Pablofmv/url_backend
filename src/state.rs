@@ -112,8 +112,7 @@ impl AppState {
             SELECT
                 id,
                 subdomain,
-                destination_url,
-                created_at
+                destination_url
             FROM links
             ORDER BY subdomain
             "#,
