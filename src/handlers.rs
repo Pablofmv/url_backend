@@ -149,12 +149,40 @@ pub async fn redirect_by_host(
     State(state): State<AppState>,
     headers: HeaderMap,
 ) -> Result<impl IntoResponse, StatusCode> {
-    let Some(subdomain) = extract_subdomain_from_headers(&headers) else {
+    tracing::info!("redirect_by_host called");
+
+    let Some(host) = extract_host(&headers) else {
+        tracing::error!("missing host header");
         return Err(StatusCode::BAD_REQUEST);
     };
 
-    let Some(link_record) = state.find_link_by_subdomain_db(subdomain).await.map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)? else {
-        return Err(StatusCode::NOT_FOUND);
+    tracing::info!(host = %host, "host received");
+
+    let Some(subdomain) = extract_subdomain(host) else {
+        tracing::error!(host = %host, "could not extract subdomain");
+        return Err(StatusCode::BAD_REQUEST);
+    };
+
+    tracing::info!(subdomain = %subdomain, "subdomain extracted");
+
+    let link_record = match state.find_link_by_subdomain_db(subdomain).await {
+        Ok(Some(link_record)) => {
+            tracing::info!(
+                subdomain = %subdomain,
+                destination_url = %link_record.destination_url,
+                "link found in database"
+            );
+
+            link_record
+        }
+        Ok(None) => {
+            tracing::error!(subdomain = %subdomain, "subdomain not found in database");
+            return Err(StatusCode::NOT_FOUND);
+        }
+        Err(error) => {
+            tracing::error!(?error, "database lookup failed");
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
     };
 
     let destination_url = link_record.destination_url.clone();
@@ -163,15 +191,23 @@ pub async fn redirect_by_host(
 
     log_click_event(&click_event);
 
-    state
-        .save_click_event(click_event.clone())
-        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    match state.save_click_event(click_event.clone()) {
+        Ok(_) => tracing::info!("click event saved in memory"),
+        Err(error) => {
+            tracing::error!(?error, "failed to save click event in memory");
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    }
 
-    if let Err(error) = state.save_click_event_db(&click_event).await {
-        tracing::error!(?error, "failed to save click event");
+    match state.save_click_event_db(&click_event).await {
+        Ok(_) => tracing::info!("click event saved in database"),
+        Err(error) => {
+            tracing::error!(?error, "failed to save click event in database");
+            return Err(StatusCode::INTERNAL_SERVER_ERROR);
+        }
+    }
 
-        return Err(StatusCode::INTERNAL_SERVER_ERROR);
-    };
+    tracing::info!(destination_url = %destination_url, "redirecting user");
 
     Ok(Redirect::temporary(&destination_url))
 }
